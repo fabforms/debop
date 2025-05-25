@@ -1,61 +1,53 @@
-# debun
+# debop
 
-> A modern, minimalist debounce utility for JavaScript and Node.js — ensuring your functions run only after the noise settles.
+> A playful, minimalist debounce utility for JavaScript and Node.js
 
-## Why debun?
+## Why debop?
 
-In many interactive applications (e.g., handling resize, scroll, input events), you want to delay execution until rapid-fire calls calm down. **debun** offers a tiny, zero-dependency solution:
+When your app fires events faster than it can handle, **debop** steps in to “bop” extra calls away, ensuring your handler only runs once after the flurry subsides.
 
-- **Tree-shakeable** ES module  
-- **Works** in both browser and Node.js  
-- **Easy** to use and configure  
-- **Minimal** overhead
+- **Tiny & tree-shakeable** ES module  
+- **Zero dependencies**  
+- **Works** in browsers and Node.js  
+- **Fun & memorable** name  
 
-## Installation
+## Install
 
 ```bash
-npm install debun
+npm install debop
 ````
 
 ## Usage
 
 ```js
-import { debun } from 'debun';
+import { debop } from 'debop';
 
-const onResize = debun(() => {
+const onResize = debop(() => {
   console.log('Resized!');
-}, 300);
+}, 200);
 
 window.addEventListener('resize', onResize);
 ```
 
 ## API
 
-### `debun(fn: Function, delay?: number): Function`
+### `debop(fn: Function, delay?: number): Function`
 
-* **fn** — The function to debounce.
-* **delay** — Milliseconds to wait after the last call before invoking **fn** (default: `300`).
-* **Returns** — A new function that postpones execution until calls stop for `delay` ms.
+* **fn** — Function to debounce
+* **delay** — Time in ms to wait after last call (default `300`)
+* **Returns** — A debounced version of `fn`
 
-## Testing
-
-Run the provided test script:
+## Test
 
 ```bash
 npm test
-# or
-node test.js
 ```
 
-You should see:
+This runs `test.js` and should print:
 
 ```
-✅ Test passed: debounced function called exactly once
+✅ debop test passed: called exactly once
 ```
-
-## Contributing
-
-Pull requests, issues, and feature suggestions are welcome! Please open an issue or submit a PR at [github.com/fabforms/debun](https://github.com/fabforms/debun).
 
 ## License
 
@@ -65,7 +57,6 @@ MIT © Geoffrey Callaghan
 
 ## Sponsorship
 
-This project is proudly sponsored by **[FabForm.io](https://fabform.io)** — the easiest way to create, manage, and embed beautiful web forms without writing code.
+This project is proudly sponsored by **[FabForm.io](https://fabform.io)** — effortless form and data handling for modern web apps.
 
-Give your users seamless form experiences with zero setup!
 
