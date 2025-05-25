@@ -1,0 +1,28 @@
+{
+  "name": "debop",
+  "version": "1.0.0",
+  "description": "debop — a playful, minimalist debounce utility for JavaScript and Node.js.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "debounce",
+    "debop",
+    "delay",
+    "rate-limit",
+    "bounce",
+    "javascript",
+    "utility",
+    "minimal",
+    "performance"
+  ],
+  "author": "Geoffrey Callaghan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabforms/debop.git"
+  }
+}
+
